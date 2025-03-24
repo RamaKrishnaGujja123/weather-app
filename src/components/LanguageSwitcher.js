@@ -9,6 +9,10 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(lng);
   };
 
+  console.log('LanguageSwitcher component rendered');
+  console.log('Current language:', i18n.language);
+  console.log('Available languages:', i18n.languages);
+
   return (
     <div className="language-switcher">
       <button onClick={() => changeLanguage('en')}>English</button>
