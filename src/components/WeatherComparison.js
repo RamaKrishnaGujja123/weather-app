@@ -31,20 +31,19 @@ const WeatherComparison = ({ city }) => {
           placeholder="Enter city name"
           value={comparisonCity}
           onChange={(e) => setComparisonCity(e.target.value)}
-        />
-        <button type="submit">Compare</button>
-      </form>
-      {comparisonData && (
-        <div className="comparison-result">
-          <h3>{comparisonData.name}</h3>
-          <p>Temperature: {Math.round(comparisonData.main.temp)}°C</p>
-          <p>Weather: {comparisonData.weather[0].description}</p>
-          <p>Humidity: {comparisonData.main.humidity}%</p>
-          <p>Wind Speed: {comparisonData.wind.speed} m/s</p>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default WeatherComparison;
+        />   <button type="submit">Compare</button>
+        </form>
+        {comparisonData && (
+          <div className="comparison-result">
+            <h3>{comparisonData.name}</h3>
+            <p>Temperature: {Math.round(comparisonData.main.temp)}°C</p>
+            <p>Weather: {comparisonData.weather[0].description}</p>
+            <p>Humidity: {comparisonData.main.humidity}%</p>
+            <p>Wind Speed: {comparisonData.wind.speed} m/s</p>
+          </div>
+        )}
+      </div>
+    );
+  };
+  
+  export default WeatherComparison;
