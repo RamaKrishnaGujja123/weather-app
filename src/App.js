@@ -12,7 +12,6 @@ import WeatherComparison from "./components/WeatherComparison";
 import WeatherWidget from "./components/WeatherWidget";
 import WeatherInsights from "./components/WeatherInsights";
 import WeatherCharts from "./components/WeatherCharts";
-import LanguageSwitcher from "./components/LanguageSwitcher";
 import './styles/App.css';
 import 'leaflet/dist/leaflet.css';
 
@@ -90,7 +89,6 @@ const App = () => {
   return (
     <div className="app">
       <SearchBar setCity={setCity} />
-      <LanguageSwitcher />
       {error && <div className="error">{error}</div>}
       {weatherData && (
         <div className="main-container">
